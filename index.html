@@ -1,15 +1,41 @@
-<!DOCTYPE html>
-<html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>team3Security</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+</head>
+
 <body>
+  <div class="input">
+    <textarea id="input" placeholder="Input"></textarea>
+  </div>
+  <div class="submit">
+    <input class="btn btn-default" id="execute" type="button" value="Hash">
+  </div>
 
-<form action="/action_page.php">
-  <label for="fname">Mensagem:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Codigo:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="submit" value="Cifrar">
-</form>
-
-
+  <strong><label>Mensagem Original:</label></strong>
+  <span id="demo0"></span>
+  <br>
+  <br>
+  <strong><label>SHA256:</label></strong>
+  <span id="demo2"></span>
+  <br>
+  <br>
+  <strong><label>Encrypted AES: MESSAGE + SHA256 </label></strong>
+  <span id="demo3"></span>
+  <br>
+  <br>
+  <strong><label>Decrypted AES: MESSAGE + SHA256</label></strong>
+  <span id="demo4"></span>
+  <br/>
+  <br/>
 </body>
+
+
+
+  <script src="app.js"></script>
 </html>
