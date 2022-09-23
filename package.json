@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/vixtorlucas/team3Security/issues"
   },
-  "homepage": "https://github.com/vixtorlucas/team3Security#readme"
+  "homepage": "https://github.com/vixtorlucas/team3Security#readme",
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  }
 }
