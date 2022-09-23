@@ -6,36 +6,84 @@
   <title>team3Security</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 </head>
 
-<body>
-  <div class="input">
-    <textarea id="input" placeholder="Input"></textarea>
-  </div>
-  <div class="submit">
-    <input class="btn btn-default" id="execute" type="button" value="Hash">
-  </div>
+<body style="text-align: center">
+  <h1>Questão 1</h1>
+  <div>
+    <h1 class="maintitle">CIFRA DE CÉSAR</h1>
+    <div>
+      <p><strong>Digite para criptografar ou descriptografar:</strong> </p><input type="text" id="texto">
+      <p><strong>Deslocamento:</strong></p><input type="number" id="deslocamento">
+    </div>
 
-  <strong><label>Mensagem Original:</label></strong>
-  <span id="demo0"></span>
-  <br>
-  <br>
-  <strong><label>SHA256:</label></strong>
-  <span id="demo2"></span>
-  <br>
-  <br>
-  <strong><label>Encrypted AES: MESSAGE + SHA256 </label></strong>
-  <span id="demo3"></span>
-  <br>
-  <br>
-  <strong><label>Decrypted AES: MESSAGE + SHA256</label></strong>
-  <span id="demo4"></span>
-  <br/>
-  <br/>
+    <div>
+      <br>
+      <button class=button1 onclick="cifrar()">Codificar</button>
+      <button class=button1 onclick="decifrar()">Decifrar</button>
+    </div>
+
+    <br></br>
+
+    <div>
+      <p><label for="textocifrado"><strong>Veja sua mensagem:</strong></label></p>
+      <textarea id="textocifrado" name="Seu Texto"></textarea>
+      <br />
+      <br />
+    </div>
+    <div>
+      <h1>Questão 2</h1>
+      <h1 class="maintitle">Algoritmo AES</h1>
+      <div>
+        <p><strong>Digite para criptografar ou descriptografar sua mensagem:</strong> </p><input type="text" id="aesTextInput">
+        <p><strong>Selecione uma chave secreta para encriptografar/desincriptografar o texto:</strong></p><input type="text" id="aesSecretKey">
+      </div>
+  
+      <div>
+        <br>
+        <button class=button1 onclick="encryptInput()">Codificar</button>
+        <button class=button1 onclick="decryptInput()">Decifrar</button>
+      </div>
+  
+            <br></br>
+  
+      <div>
+        <p><label for="hashOrText"><strong>Veja sua mensagem:</strong></label></p>
+        <textarea id="hashOrText" name="Seu Texto"></textarea>
+      </div>
+    </div>
+    <h1>Questão 4</h1>
+    <div class="input">
+      <textarea id="input" placeholder="Input"></textarea>
+    </div>
+    <div class="submit">
+      <input class="btn btn-default" id="execute" type="button" value="Hash">
+    </div>
+
+    <strong><label>Mensagem Original:</label></strong>
+    <span id="demo0"></span>
+    <br>
+    <br>
+    <strong><label>SHA256:</label></strong>
+    <span id="demo2"></span>
+    <br>
+    <br>
+    <strong><label>Encrypted AES: MESSAGE + SHA256 </label></strong>
+    <span id="demo3"></span>
+    <br>
+    <br>
+    <strong><label>Decrypted AES: MESSAGE + SHA256</label></strong>
+    <span id="demo4"></span>
+
 </body>
 
 
 
-  <script src="app.js"></script>
+<script src="app.js"></script>
+<script src="cifraCesar.js"></script>
+<script src="AESweb.js"></script>
+
 </html>
