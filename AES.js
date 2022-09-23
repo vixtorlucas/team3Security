@@ -12,14 +12,14 @@ let secretkey
 function encryptAES(message, secretKey){
     const hash = AES.encrypt(message, secretKey).toString()
 
-    return `a hash encriptogrado para a mensagem selecionada é: ${hash}`
+    return `a hash encriptografado para a mensagem selecionada é: ${hash}`
 }
 
 function decryptAES(hash, secretKey){
     const decryptedMessage = AES.decrypt(hash, secretKey).toString(CryptoJS.enc.Utf8)
 
     if(decryptedMessage === '') return 'hash ou secretKey invalida'
-    return `o texto desencriptogrado para a hash selecionada é: ${decryptedMessage}`
+    return `o texto desencriptografado para a hash selecionada é: ${decryptedMessage}`
 
 }
 
@@ -33,7 +33,7 @@ async function getOption() {
 }
 
 async function getTextToHash() {
-    message = await makeQuestion('Digite uma frase para ser encriptada: ')
+    message = await makeQuestion('Digite uma frase para ser encriptografada: ')
     return message
 }
 
@@ -50,7 +50,7 @@ async function getSecretKey(){
 async function main(){
 
     console.log('Bem vindo ao encriptador/desencriptador AES, o que deseja?')
-    console.log(`1 - encriptar uma mensagem \n2 - desencriptar uma mensagem`)
+    console.log(`1 - Encriptografar uma mensagem \n2 - Desencriptografar uma mensagem`)
     const option = await getOption()
 
     switch(option){
