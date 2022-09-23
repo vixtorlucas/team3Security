@@ -41,42 +41,44 @@
         <p><strong>Digite para criptografar ou descriptografar sua mensagem:</strong> </p><input type="text" id="aesTextInput">
         <p><strong>Selecione uma chave secreta para encriptografar/desincriptografar o texto:</strong></p><input type="text" id="aesSecretKey">
       </div>
-  
+
       <div>
         <br>
         <button class=button1 onclick="encryptInput()">Codificar</button>
         <button class=button1 onclick="decryptInput()">Decifrar</button>
       </div>
-  
+
             <br></br>
-  
+
       <div>
         <p><label for="hashOrText"><strong>Veja sua mensagem:</strong></label></p>
         <textarea id="hashOrText" name="Seu Texto"></textarea>
       </div>
     </div>
     <h1>Questão 4</h1>
+    <div>
+      <p><strong>Digite para criptografar ou validar sua mensagem:</strong> </p>
+      <p><strong>Tecnica utilizada:AES(Mensagem + SHA256)</strong>
+    </div>
     <div class="input">
-      <textarea id="input" placeholder="Input"></textarea>
+      <textarea id="message" placeholder="Mensagem"></textarea>
+    </div>
+    <div class="input">
+      <textarea id="senhaQ4" placeholder="Senha"></textarea>
     </div>
     <div class="submit">
-      <input class="btn btn-default" id="execute" type="button" value="Hash">
+      <input class="btn btn-default" id="execute" type="button" value="Codificar">
     </div>
-
-    <strong><label>Mensagem Original:</label></strong>
+    <div class="submit">
+      <input class="btn btn-default" id="validate" type="button" value="Validar">
+    </div>
+    <strong><label>Mensagem:</label></strong>
     <span id="demo0"></span>
-    <br>
-    <br>
-    <strong><label>SHA256:</label></strong>
-    <span id="demo2"></span>
-    <br>
-    <br>
-    <strong><label>Encrypted AES: MESSAGE + SHA256 </label></strong>
+    <strong><label id="MessageLabel"></label></strong>
     <span id="demo3"></span>
     <br>
     <br>
-    <strong><label>Decrypted AES: MESSAGE + SHA256</label></strong>
-    <span id="demo4"></span>
+
 
 </body>
 
